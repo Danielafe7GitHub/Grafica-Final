@@ -1,0 +1,57 @@
+[background]
+	rgb 	1.0	1.0	1.0
+[/background]
+
+[camera]
+	pos 	0.0	0.0	20.0
+	dir 	0.0	0.0	-1.0
+	up 	0.0	1.0	0.0
+	fovy	60.0
+[/camera]
+
+[light]
+	name 	ambient
+	rgb 	0.5	0.5	0.5
+[/light]
+
+
+[transformation]
+	name 	translate
+	dxdydz	5.0	5.0	5.0
+	[light]
+		name 	point
+		rgb 	1.0	1.0	1.0
+	[/light]
+
+[/transformation]
+
+[transformation]
+	name 	translate
+	dxdydz	0.0	0.0	3.0
+
+	[transformation]
+		name 	rotate
+		axis 	1	1	1
+		angle 30
+
+		[transformation]
+			name 	scale
+			sxsysz	2	1	1
+
+			[object]
+				name 	triangle
+				vertices 	0.0 	0.0 	0.0	1.0	0.0	0.0	1.0	1.0	0.0
+				refractive	0.0
+				reflective	0.3
+				shinniness	45
+				ior 	1.05
+				rgb	0	255	0
+			[/object]
+		[/transformation]
+	[/transformation]
+
+[/transformation]
+
+
+
+[end]
